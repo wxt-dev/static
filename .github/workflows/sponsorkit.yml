@@ -12,7 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
       - uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
@@ -20,18 +19,11 @@ jobs:
       - run: bun sponsorkit
         env:
           SPONSORKIT_GITHUB_TOKEN: ${{ secrets.SPONSORKIT_GITHUB_TOKEN }}
-          SPONSORKIT_GITHUB_LOGIN: antfu
-          SPONSORKIT_OPENCOLLECTIVE_KEY: ${{ secrets.SPONSORKIT_OPENCOLLECTIVE_KEY }}
-          SPONSORKIT_OPENCOLLECTIVE_SLUG: antfu
-          SPONSORKIT_AFDIAN_USER_ID: ${{ secrets.SPONSORKIT_AFDIAN_USER_ID }}
-          SPONSORKIT_AFDIAN_TOKEN: ${{ secrets.SPONSORKIT_AFDIAN_TOKEN }}
-
-      - name: Commit
-        uses: EndBug/add-and-commit@v9
+      - uses: EndBug/add-and-commit@v9
         with:
           author_name: GitHub Actions
-          author_email: 41898282+github-actions[bot]@users.noreply.github.com
-          message: "chore: update sponsors.svg [ci skip]"
+          author_email: github-actions@users.noreply.github.com
+          message: "Update sponsors [ci skip]"
           add: "sponsors.*"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

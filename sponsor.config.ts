@@ -1,6 +1,10 @@
 import { defineConfig, tierPresets } from "sponsorkit";
 
 export default defineConfig({
+  github: {
+    login: "wxt-dev",
+    type: "organization",
+  },
   tiers: [
     { title: "Past Sponsors", monthlyDollars: -1, preset: tierPresets.xs },
     { title: "Backers" },
