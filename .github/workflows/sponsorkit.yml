@@ -1,5 +1,4 @@
-name: Scheduler
-
+name: Sponsorkit
 on:
   workflow_dispatch:
   schedule:
@@ -24,6 +23,6 @@ jobs:
           author_name: GitHub Actions
           author_email: github-actions@users.noreply.github.com
           message: "Update sponsors [ci skip]"
-          add: "sponsors.*"
+          add: "sponsorkit/*"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
