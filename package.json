@@ -1,0 +1,11 @@
+{
+  "name": "sponsors",
+  "type": "module",
+  "dependencies": {
+    "sponsorkit": "^0.16.2"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.0.0"
+  }
+}
