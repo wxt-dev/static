@@ -1,5 +1,6 @@
 {
   "name": "sponsors",
+  "packageManager": "bun@1.1.41",
   "type": "module",
   "dependencies": {
     "sponsorkit": "^0.16.2"
