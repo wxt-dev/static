@@ -1,3 +1,3 @@
 # Static Resources for WXT
 
-- Sponsors image
+- Sponsors image: `bun sponsorkit`
